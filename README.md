@@ -21,6 +21,7 @@ Step2: Enter an uppercase letter (A-Z) in the input field.
 Step3: Click the "Search" button to view the corresponding image and description.
 
 # Screenshots
+![image](https://github.com/user-attachments/assets/bb9e1f4b-f5dc-4361-aa74-8bd8c1ea268e)
 
 
 
