@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Kids Alphabet Game</title>
+    <style>
+        body {
+            background: linear-gradient(135deg, #f3e7e9 0%, #e3eeff 100%);
+            text-align: center;
+            font-family: 'Poppins', sans-serif;
+            color: #333;
+        }
+        #m1 {
+            border: 2px solid #6a0572;
+            border-radius: 10px;
+            font-size: 18px;
+            padding: 5px;
+            width: 250px;
+            text-align: center;
+            box-shadow: 3px 3px 10px rgba(0,0,0,0.2);
+        }
+        #s1 {
+            border: none;
+            border-radius: 10px;
+            font-size: 18px;
+            padding: 8px 20px;
+            cursor: pointer;
+            background-color: #6a0572;
+            color: white;
+            box-shadow: 3px 3px 10px rgba(0,0,0,0.2);
+        }
+        #s1:hover {
+            background-color: #8e44ad;
+        }
+        #container {
+            margin-top: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        #p1 {
+            width: 320px;
+            height: 320px;
+            background: linear-gradient(135deg, #f3e7e9 0%, #e3eeff 100%);
+            border-radius: 20px;
+            border: 5px solid #6a0572;
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 20px;
+            box-shadow: 5px 5px 15px rgba(0,0,0,0.3);
+        }
+        #p2 {
+            width: 320px;
+            height: 50px;
+            background: #8e44ad;
+            border-radius: 20px;
+            border: 3px solid #6a0572;
+            text-align: center;
+            font-size: 20px;
+            font-style: italic;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 10px;
+            box-shadow: 3px 3px 10px rgba(0,0,0,0.2);
+        }
+    </style>
+    <script>
+        function ab() {
+            let n = document.getElementById("m1").value.toUpperCase();
+            let images = {
+                'A': { img: 'apple.jpg', text: "It is an Apple" },
+                'B': { img: 'ball.jpg', text: "It is a Ball" },
+                'C': { img: 'cat.jpg', text: "Hey, it's a Kitty Cat!" },
+                'D': { img: 'doraemon.jpg', text: "Hey, it's Doraemon!" },
+                'E': { img: 'elephant.jpg', text: "It is an Elephant" },
+                'F': { img: 'fish.jpg', text: "It is a Fish" },
+                'G': { img: 'grapes.jpg', text: "It is Grapes" },
+                'H': { img: 'hen.jpg', text: "Hey! I'm a Hen." },
+                'I': { img: 'ice-cream.jpg', text: "It is an Ice Cream" },
+                'J': { img: 'joker.jpg', text: "Hey, I'm a Joker!" },
+                'K': { img: 'king.jpg', text: "Hey! I'm a King" },
+                'L': { img: 'lion.jpg', text: "Hey! I'm the King of the Jungle" },
+                'M': { img: 'mango.jpg', text: "Hey! I'm the King of Fruits" },
+                'N': { img: 'nest.jpg', text: "It is a Nest" },
+                'O': { img: 'owl.jpg', text: "Hey! I'm an Owl" },
+                'P': { img: 'peacock.jpg', text: "Hey! I'm a Peacock" },
+                'Q': { img: 'queen.jpg', text: "Hey! I'm a Queen" },
+                'R': { img: 'rabbit.jpg', text: "It is a Rabbit" },
+                'S': { img: 'ship.jpg', text: "It is a Ship" },
+                'T': { img: 'tiger.jpg', text: "Hey! I'm a Tiger" },
+                'U': { img: 'umbrella.jpg', text: "It is an Umbrella" },
+                'V': { img: 'violin.jpg', text: "It is a Violin" },
+                'W': { img: 'watch.jpg', text: "It is a Watch" },
+                'X': { img: 'xmas-tree.jpg', text: "It is an X-Mas Tree" },
+                'Y': { img: 'yak.jpg', text: "It is a Yak" },
+                'Z': { img: 'zebra.jpg', text: "Hey! I'm a Zebra" }
+            };
+
+            if (images[n]) {
+                document.getElementById("p1").style.backgroundImage = `url('${images[n].img}')`;
+                document.getElementById("p2").innerHTML = images[n].text;
+            } else {
+                document.getElementById("p1").style.backgroundImage = "url('sorry.jpg')";
+                document.getElementById("p2").innerHTML = "Please enter a valid letter (A-Z)";
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>Kids Alphabet Learning Game</h1>
+    <p>Enter an alphabet in capital letters and see the corresponding image!</p>
+    <input type="text" id="m1" placeholder="Enter Alphabet in Capital Letter">
+    <button onclick="ab()" id="s1">Search</button>
+    <div id="container">
+        <div id="p1"></div>
+        <div id="p2"></div>
+    </div>
+</body>
+</html>
